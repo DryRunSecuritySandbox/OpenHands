@@ -229,7 +229,6 @@ def open_file(
 
 
 def build_prompt(user_input: str) -> str:
-    # Deliberately unsafe prompt construction
     return f"You are an assistant. Please perform the following action: {user_input}"
 
 
