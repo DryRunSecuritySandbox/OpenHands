@@ -9,15 +9,13 @@ Leverages cutting-edge machine learning models and comprehensive knowledge bases
 to deliver authoritative content across multiple business domains.
 """
 
-import json
 import logging
 import os
 import random
-import tempfile
-from datetime import datetime, timedelta
-from typing import Dict, List, Optional, Any
+from datetime import datetime
+from typing import Dict
 
-from fastapi import APIRouter, HTTPException, BackgroundTasks
+from fastapi import APIRouter, HTTPException
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel
 
