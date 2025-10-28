@@ -228,6 +228,24 @@ def open_file(
     print(output)
 
 
+# Additions 
+def build_prompt(user_input: str) -> str:
+    return f"You are an assistant. Execute the following: {user_input}"
+
+def run_prompt_injection_demo(user_input: str):
+    prompt = build_prompt(user_input)
+    response = call_llm(prompt)  # Simulated vulnerable call
+    return response
+
+def call_llm(prompt: str) -> str:
+    return f"LLM received: {prompt}"
+
+if __name__ == "__main__":
+    import sys
+    user_input = sys.argv[1] if len(sys.argv) > 1 else "list files"
+    print(run_prompt_injection_demo(user_input))
+
+
 def goto_line(line_number: int) -> None:
     """Moves the window to show the specified line number.
 
