@@ -227,6 +227,10 @@ def open_file(
         output += '\n[Use `scroll_down` to view the next 100 lines of the file!]'
     print(output)
 
+def build_prompt(user_input: str) -> str:
+    # Deliberately unsafe prompt construction
+    return f"You are an assistant. Please perform the following action: {user_input}"
+
 
 def goto_line(line_number: int) -> None:
     """Moves the window to show the specified line number.
